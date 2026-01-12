@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical</title>
+    <!-- lins lenis -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Your CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/Alassel Logo png.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 main-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">المعمول</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">عرض الواقع</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">منتجاتنا</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pages-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                صفحاتنا
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#">من نحن</a></li>
+                                <li><a class="dropdown-item" href="#">تواصل معنا</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">جمعيتنا البيضاء</a>
+                        </li>
+                    </ul>
+
+                    <div class="icons d-flex align-items-center gap-3">
+                        <!-- Cart -->
+                        <!-- <div class="position-relative cart_main">
+                            <img src="./assets/img/cart-1-svgrepo-com.svg" alt="Cart">
+                            <span
+                                class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-circle">
+                                0
+                            </span>
+                        </div> -->
+
+                        <!-- Favorite -->
+                        <!-- <img src="./assets/img/heart-alt-svgrepo-com.svg" alt="Favorite"> -->
+
+                        <img src="./assets/img/search-svgrepo-com.svg" alt="Search" data-bs-toggle="modal"
+                            data-bs-target="#searchModal" style="cursor: pointer;">
+
+                        <img src="./assets/img/user-svgrepo-com.svg" alt="Profile" data-bs-toggle="modal"
+                            data-bs-target="#loginModal" style="cursor: pointer;">
+
+                        <div class="demo-container">
+                            <div class="lang-btn-4" onclick="toggleSwitch(this)">
+                                <a href="./index.html" class="lang-option active">AR</a>
+                                <a href="./index_tow.html" class="lang-option ">EN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <main>
+        <div class="container  details_products">
+            <div class="product-container">
+                <div class="row">
+                    <!-- Product Images -->
+                    <div class="col-lg-6">
+                        <div class="product-images-section">
+                            <!-- Main Slider -->
+                            <div class="slider-for">
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة 1"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة 2"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة 3"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة 4"></div>
+                            </div>
+
+                            <!-- Thumbnail Slider -->
+                            <div class="slider-nav">
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="صورة 1"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="صورة 2"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="صورة 3"></div>
+                                <div><img src="./assets/img/تمر خضري (1).png" alt="صورة 4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="col-lg-6">
+                        <div class="product-info">
+                            <span class="discount-badge">خصم 20%</span>
+
+                            <h1 class="product-title">تمور المجدول الفاخرة - درجة أولى</h1>
+
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-count">(4.8) - 542 تقييم</span>
+                            </div>
+
+                            <div class="price-section">
+                                <span class="product-price">240 <span class="currency">ر.س</span></span>
+                                <span class="old-price">300 <span class="currency">ر.س</span></span>
+                            </div>
+
+
+                            <p class="product-description">
+                                تمور المجدول الفاخرة من أجود أنواع التمور، مزروعة في أفضل المزارع العربية. تتميز بطعمها
+                                الحلو الطبيعي وقوامها الطري اللذيذ. غنية بالألياف والفيتامينات والمعادن الطبيعية. معبأة
+                                بعناية فائقة للحفاظ على نضارتها وجودتها.
+                            </p>
+
+                            <!-- Type Options -->
+                            <div class="product-options">
+                                <label class="option-label">النوع:</label>
+                                <div class="size-options" id="type-options">
+                                    <button class="active" data-type="مجدول">مجدول</button>
+                                    <button data-type="عجوة">عجوة</button>
+                                    <button data-type="صقعي">صقعي</button>
+                                    <button data-type="برحي">برحي</button>
+                                </div>
+                            </div>
+
+                            <!-- Weight Options -->
+                            <div class="product-options">
+                                <label class="option-label">الوزن:</label>
+                                <div class="size-options" id="weight-options">
+                                    <button data-weight="500 جم">500 جم</button>
+                                    <button class="active" data-weight="1 كجم">1 كجم</button>
+                                    <button data-weight="2 كجم">2 كجم</button>
+                                    <button data-weight="5 كجم">5 كجم</button>
+                                </div>
+                            </div>
+
+
+                            <!-- Action Buttons -->
+                            <div class="action-buttons">
+                                <button class="btn-add-cart" onclick="orderWhatsApp()">
+                                    <i class="fab fa-whatsapp"></i> اطلب عبر واتساب
+                                </button>
+                                <button class="btn-buy-now" onclick="orderWhatsApp()">
+                                    <i class="fas fa-phone-alt"></i> اتصل بنا
+                                </button>
+                                <button class="btn-wishlist" id="wishlistBtn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Product Features -->
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-truck feature-icon"></i>
+                                    <div>
+                                        <strong>شحن مجاني</strong>
+                                        <p class="mb-0 text-muted">للطلبات أكثر من 200 ج.م</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-leaf feature-icon"></i>
+                                    <div>
+                                        <strong>منتج طبيعي 100%</strong>
+                                        <p class="mb-0 text-muted">بدون مواد حافظة أو إضافات</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-certificate feature-icon"></i>
+                                    <div>
+                                        <strong>جودة مضمونة</strong>
+                                        <p class="mb-0 text-muted">تمور فاخرة درجة أولى</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="product-container tabs-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#description">الوصف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#specifications">المواصفات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#reviews">التقييمات</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="description" class="tab-pane fade show active">
+                        <h3>وصف المنتج</h3>
+                        <p>تمور المجدول الفاخرة من أجود أنواع التمور المعروفة عالمياً، تُزرع في أفضل المناطق الزراعية
+                            وتُعتنى بها بعناية فائقة منذ بداية نموها حتى جنيها.</p>
+                        <p>تتميز تمور المجدول بطعمها الحلو الطبيعي الغني، وقوامها الطري الشهي، ولونها البني الداكن
+                            الجذاب.
+                            كل حبة تمر يتم انتقاؤها بعناية لضمان أعلى مستويات الجودة.</p>
+                        <p>التمور غنية بالعناصر الغذائية الهامة مثل الألياف، البوتاسيوم، المغنيسيوم، والفيتامينات. تُعد
+                            وجبة
+                            خفيفة مثالية وصحية في أي وقت من اليوم.</p>
+                    </div>
+
+                    <div id="specifications" class="tab-pane fade">
+                        <h3>معلومات المنتج</h3>
+                        <ul>
+                            <li><strong>النوع:</strong> تمور المجدول الفاخرة</li>
+                            <li><strong>المنشأ:</strong> المملكة العربية السعودية</li>
+                            <li><strong>الدرجة:</strong> درجة أولى ممتازة</li>
+                            <li><strong>الوزن:</strong> 1 كيلوجرام</li>
+                            <li><strong>التعبئة:</strong> عبوة محكمة الإغلاق</li>
+                            <li><strong>الصلاحية:</strong> 12 شهر من تاريخ الإنتاج</li>
+                            <li><strong>التخزين:</strong> في مكان جاف وبارد</li>
+                            <li><strong>القيمة الغذائية:</strong> 282 سعرة حرارية لكل 100 جرام</li>
+                        </ul>
+                        <h4 class="mt-4">الفوائد الصحية:</h4>
+                        <ul>
+                            <li>مصدر ممتاز للطاقة الطبيعية</li>
+                            <li>غني بالألياف التي تساعد على الهضم</li>
+                            <li>يحتوي على مضادات أكسدة قوية</li>
+                            <li>يدعم صحة القلب والأوعية الدموية</li>
+                            <li>يساعد في تقوية العظام</li>
+                        </ul>
+                    </div>
+
+                    <div id="reviews" class="tab-pane fade">
+                        <h3>آراء العملاء</h3>
+                        <div class="review-item">
+                            <div class="d-flex justify-content-between mb-2">
+                                <strong>محمد عبدالله</strong>
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <p class="text-muted mb-2">منذ 3 أيام</p>
+                            <p class="mb-0">تمور ممتازة جداً، طازجة وطرية ولذيذة. التعبئة محكمة والتوصيل سريع. أفضل تمور
+                                جربتها!</p>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="d-flex justify-content-between mb-2">
+                                <strong>فاطمة أحمد</strong>
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <p class="text-muted mb-2">منذ أسبوع</p>
+                            <p class="mb-0">جودة رائعة! التمر طري وحلو جداً. طلبت منه مرتين وسأطلب مرة ثالثة. أنصح به
+                                بشدة
+                                👍</p>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="d-flex justify-content-between mb-2">
+                                <strong>خالد حسن</strong>
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                            </div>
+                            <p class="text-muted mb-2">منذ أسبوعين</p>
+                            <p class="mb-0">تمور المجدول الأصلية. جودة عالية وسعر مناسب. العبوة نظيفة ومحكمة الإغلاق.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./assets/img/Alassel Logo png.png" alt="Logo">
+                    <p>التمر هو ثمرة شجرة النخيل المباركة، غذاء طبيعي غني بالفوائد الصحية والقيم الغذائية. نقدم لكم
+                        أجود أنواع التمور من مختلف مناطق المملكة.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>أنواع التمور</h3>
+                    <ul>
+                        <li><a href="#">تمر عجوة المدينة المنورة</a></li>
+                        <li><a href="#">تمر خلاص القصيم</a></li>
+                        <li><a href="#">تمر صقعي الأحساء</a></li>
+                        <li><a href="#">تمر سكري القصيم</a></li>
+                        <li><a href="#">تمر مبروم المدينة</a></li>
+                        <li><a href="#">تمر برحي الطائف</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>الفوائد الصحية</h3>
+                    <ul>
+                        <li>غني بالألياف والمعادن</li>
+                        <li>مصدر طبيعي للطاقة</li>
+                        <li>يقوي الجهاز المناعي</li>
+                        <li>يحسن صحة الهضم</li>
+                        <li>غني بمضادات الأكسدة</li>
+                        <li>يدعم صحة القلب</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> هاتف: 966+ 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> البريد: info@dates.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2026 | موقع التمور الفاخرة </p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">صُنع بحب من أرض النخيل والتمور</p>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- model user -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-modal">
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="modal-body text-center p-4">
+                    <div class="user-icon-circle mx-auto mb-4">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3 class="login-title mb-4">تسجيل الدخول</h3>
+
+                    <form>
+                        <div class="mb-3 text-end">
+                            <label for="emailInput" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control login-input" id="emailInput"
+                                placeholder="your@email.com">
+                        </div>
+
+                        <button type="submit" class="btn btn-login w-100">دخول</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- model search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content search-modal">
+                <button type="button" class="btn-close-search" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="modal-body p-0">
+                    <div class="search-area">
+                        <div class="search-icon-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" class="search-input" placeholder="ابحث عن منتجات، فئات أو كلمات مفتاحية..."
+                            id="searchInput">
+                        <button class="search-btn" type="button">
+                            <span>بحث</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+
+                    <div class="search-suggestions">
+                        <h6 class="suggestions-title">عمليات البحث الشائعة</h6>
+                        <div class="suggestions-list">
+                            <span class="suggestion-tag">منتجات جديدة</span>
+                            <span class="suggestion-tag">عروض خاصة</span>
+                            <span class="suggestion-tag">الأكثر مبيعاً</span>
+                            <span class="suggestion-tag">منتجات مميزة</span>
+                            <span class="suggestion-tag">تخفيضات</span>
+                        </div>
+                    </div>
+
+                    <div class="search-results d-none" id="searchResults">
+                        <div class="result-item">
+                            <div class="result-img">
+                                <img src="./assets/img/logo.png" alt="Product">
+                            </div>
+                            <div class="result-info">
+                                <h6>اسم المنتج هنا</h6>
+                                <p class="result-price">250 جنيه</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end btn scroll -->
+    <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- scrollreveal Animation JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- main js -->
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                arrows: true,
+                infinite: true,
+                rtl: true,
+                asNavFor: '.slider-nav'
+            });
+
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                asNavFor: '.slider-for',
+                focusOnSelect: true,
+                rtl: true,
+                arrows: false,
+                responsive: [
+                    { breakpoint: 768, settings: { slidesToShow: 3 } },
+                    { breakpoint: 576, settings: { slidesToShow: 2 } }
+                ]
+            });
+
+            $('#type-options button').on('click', function () {
+                $('#type-options button').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#weight-options button').on('click', function () {
+                $('#weight-options button').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#wishlistBtn').on('click', function () {
+                const icon = $(this).find('i');
+                icon.toggleClass('far fas');
+
+                $(this).toggleClass('active').css(
+                    icon.hasClass('fas')
+                        ? { background: '#dc3545', color: '#fff', borderColor: '#dc3545' }
+                        : { background: '#fff', color: '#dc3545', borderColor: '#dee2e6' }
+                );
+            });
+
+        });
+
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
