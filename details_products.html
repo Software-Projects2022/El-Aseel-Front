@@ -480,7 +480,7 @@
 
             $('.slider-for').slick({
                 slidesToShow: 1,
-                arrows: true,
+                arrows: false,
                 infinite: true,
                 rtl: true,
                 asNavFor: '.slider-nav'
@@ -498,15 +498,7 @@
                 ]
             });
 
-            $('#type-options button').on('click', function () {
-                $('#type-options button').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            $('#weight-options button').on('click', function () {
-                $('#weight-options button').removeClass('active');
-                $(this).addClass('active');
-            });
+          
 
             $('#wishlistBtn').on('click', function () {
                 const icon = $(this).find('i');
