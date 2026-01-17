@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <!-- lins lenis -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Your CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/Alassel Logo png.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav gap-5 mx-auto mb-2 mb-lg-0 main-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">من نحن</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">منتجاتنا</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">تواصل معنا</a>
+                        </li>
+                    </ul>
+
+                    <div class="icons d-flex align-items-center gap-3">
+                        <img src="./assets/img/search-svgrepo-com.svg" alt="Search" data-bs-toggle="modal"
+                            data-bs-target="#searchModal" style="cursor: pointer;">
+
+                        <img src="./assets/img/user-svgrepo-com.svg" alt="Profile" data-bs-toggle="modal"
+                            data-bs-target="#loginModal" style="cursor: pointer;">
+
+
+                        <div class="language-selector">
+                            <button class="lang-btn">
+                                <img class="current-flag" src="https://flagcdn.com/16x12/sa.png" alt="EN">
+                                <span class="current-lang">EN</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </button>
+
+                            <ul class="lang-list">
+                                <li data-lang="ar" data-flag="https://flagcdn.com/16x12/sa.png">
+                                    <img src="https://flagcdn.com/16x12/sa.png" alt="SA">EN
+                                </li>
+                                <li data-lang="en" data-flag="https://flagcdn.com/16x12/gb.png">
+                                    <img src="https://flagcdn.com/16x12/gb.png" alt="GB"> EN
+                                </li>
+                                <li data-lang="fr" data-flag="https://flagcdn.com/16x12/fr.png">
+                                    <img src="https://flagcdn.com/16x12/fr.png" alt="FR"> EN
+                                </li>
+                                <li data-lang="de" data-flag="https://flagcdn.com/16x12/de.png">
+                                    <img src="https://flagcdn.com/16x12/de.png" alt="DE"> EN
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <main>
+        <section class="banner_main contact-banner">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2 class="mb-3">من نحن</h2>
+                    <p class="mb-0">
+                        الأصيل هي شركة تسويق وتوزيع التمور الفاخرة لمنتجات مزارع أوقاف
+                        محمد بن عبدالعزيز الراجحي، وتعمل تحت إدارة الأوقاف التي تمتلك
+                        واحدة من أكبر المزارع الفريدة في العالم، حيث إننا وصلنا لأكثر
+                        من 250000 شجرة نخيل مثمرة. ولدينا أكبر مركز أبحاث وتطوير أشجار
+                        النخيل. تهدف هذه الجهود إلى تعزيز زراعة النخيل لإنتاج أجود أنواع
+                        التمور بأعلى المعايير المحلية والدولية، والتي تهدف إلى توريد
+                        التمور بجميع أنواعها وأصنافها ومنتجاتها لجميع أنحاء العالم.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container about_main">
+            <!-- Vision Section -->
+            <div class="section">
+                <div class="row align-items-center">
+                    <div class="col-md-6 section-image">
+                        <img src="./assets/img/WhatsApp Image 2026-01-06 at 8.00.42 PM.jpeg" alt="رؤيتنا">
+                    </div>
+                    <div class="col-md-6 section-content">
+                        <h2 class="section-title">رؤيتنا</h2>
+                        <div class="content">
+                            <p>
+                                أن تكون الأصيل للعلامة و الإسم التجاري الأول لإنتاج و توزيع التمور الفاخرة في الأسواق
+                                المحلية و
+                                العالمية
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="section">
+                <div class="row align-items-center">
+                    <div class="col-md-6 section-content">
+                        <h2 class="section-title">رسالتنا</h2>
+                        <div class="content">
+                            <p>
+                                إنتاج التمور عالية الجودة بأحدث التقنيات و الأنظمة. بناء علامتنا التجارية عالمياً عن
+                                طريق
+                                حلولنا
+                                التسويقية المبتكرة. التوسع المحلي و الدولي عن طريق الشراكات الاستراتيجية مع الشركات
+                                المحلية
+                                و
+                                العالمية.
+                            </p>
+                            <div class="highlight-box">
+                                <ul>
+                                    <li>كسب رضاء العملاء عن طريق تقديم الخدمات و المنتجات التي تفوق توقعاتهم</li>
+                                    <li>دعم المشاريع الخيرية و المؤسسات الاجتماعية التي تتوافق مع أهدافنا</li>
+                                    <li>نساهم في زيادة معدل أستهلاك التمور محلياً و دولياً</li>
+                                    <li>تحقيق تطلعات رؤية المملكة 2030 التي تهدف لتعزيز دورنا لنصبح المصدر الأول للتمور
+                                        على
+                                        مستوى العالم</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-image">
+                        <img src="./assets/img/WhatsApp Image 2026-01-06 at 8.00.13 PM.jpeg" alt="رسالتنا">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farms Section -->
+            <div class="section">
+                <div class="row align-items-center">
+                    <div class="col-md-6 section-image">
+                        <img src="./assets/img/WhatsApp Image 2026-01-06 at 7.59.50 PM.jpeg" alt="مزارعنا">
+                    </div>
+                    <div class="col-md-6 section-content">
+                        <h2 class="section-title">مزارعنا</h2>
+                        <div class="content">
+                            <p>
+                                مزارع أوقاف محمد بن عبدالعزيز الراجحي منتجة للجود أنواع التمور ومنها الخلاص الصقعبي
+                                السكري
+                                الخضري مجدول. المتوفرة بمنطقة الرياض محافظة الخرج منطقة القصيم حيث يتم توفير العمالة
+                                الفنية
+                                حسب
+                                احتياجاتها.
+                            </p>
+                            <p style="margin-top: 20px;">
+                                ونسعى دائماً بمشاريعنا بمساعدتنا الزراعية للوصول إلى إنتاج أفضل أنواع التمور بجودة عالية
+                                وفقاً
+                                للمعايير المحلية والدولية التي تضمن خلو وسلامة المنتجات من أي مخلفات المبيدات والمنشدة
+                                الكيماوية
+                                ولدينا أيضًا مصروف للعدد من المهندسين وأخصائيين الغذاء يعتمدون بكونهم عالية وذلك لضمان
+                                أفضل
+                                جودة
+                                للتمور بجميع المراحل لتأمين النخيل لاحصاد التثر لتلفيفه التمور قبل مرحلة التصنيع.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Responsibility Section -->
+            <div class="section">
+                <div class="row align-items-center">
+                    <div class="col-md-6 section-content">
+                        <h2 class="section-title">المسؤوليات الاجتماعية</h2>
+                        <div class="content">
+                            <p>
+                                ندعم المجتمع المحلي والعالمي من خلال الرعاية والتبرعات لمختلف المؤسسات الخيرية و دعم
+                                المبادرات
+                                الإنسانية على مدار السنة. نفتخر بدعمنا أعداد من المزارعين المحليين من خلال مشاركتهم لهم
+                                بالمهارات الزراعية والطرق المثلى للحصول على منتجات ذات جودة عالية و ذلك بهدف ضمان
+                                أستدامة
+                                قطاع
+                                الزراعة لسنوات قادمة في المملكة العربية السعودية
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-image">
+                        <img src="./assets/img/WhatsApp Image 2026-01-06 at 7.59.50 PM (1).jpeg"
+                            alt="المسؤوليات الاجتماعية">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <img src="./assets/img/Alassel Logo png.png" alt="Logo">
+                        <p>التمر هو ثمرة شجرة النخيل المباركة، غذاء طبيعي غني بالفوائد الصحية والقيم الغذائية. نقدم لكم
+                            أجود أنواع التمور من مختلف مناطق المملكة.</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>أنواع التمور</h3>
+                        <ul>
+                            <li><a href="#">تمر عجوة المدينة المنورة</a></li>
+                            <li><a href="#">تمر خلاص القصيم</a></li>
+                            <li><a href="#">تمر صقعي الأحساء</a></li>
+                            <li><a href="#">تمر سكري القصيم</a></li>
+                            <li><a href="#">تمر مبروم المدينة</a></li>
+                            <li><a href="#">تمر برحي الطائف</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>الفوائد الصحية</h3>
+                        <ul>
+                            <li>غني بالألياف والمعادن</li>
+                            <li>مصدر طبيعي للطاقة</li>
+                            <li>يقوي الجهاز المناعي</li>
+                            <li>يحسن صحة الهضم</li>
+                            <li>غني بمضادات الأكسدة</li>
+                            <li>يدعم صحة القلب</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>تواصل معنا</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</p>
+                        <p><i class="fas fa-phone"></i> هاتف: 966+ 123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> البريد: info@dates.com</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>جميع الحقوق محفوظة © 2026 | موقع التمور الفاخرة </p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">صُنع بحب من أرض النخيل والتمور</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- model user -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-modal">
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="modal-body text-center p-4">
+                    <div class="user-icon-circle mx-auto mb-4">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3 class="login-title mb-4">تسجيل الدخول</h3>
+
+                    <form>
+                        <div class="mb-3 text-end">
+                            <label for="emailInput" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control login-input" id="emailInput"
+                                placeholder="your@email.com">
+                        </div>
+
+                        <button type="submit" class="btn btn-login w-100">دخول</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content search-modal">
+                <button type="button" class="btn-close-search" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="modal-body p-0">
+                    <div class="search-area">
+                        <div class="search-icon-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" class="search-input" placeholder="ابحث عن منتجات، فئات أو كلمات مفتاحية..."
+                            id="searchInput">
+                        <button class="search-btn" type="button">
+                            <span>بحث</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+
+                    <div class="search-suggestions">
+                        <h6 class="suggestions-title">عمليات البحث الشائعة</h6>
+                        <div class="suggestions-list">
+                            <span class="suggestion-tag">منتجات جديدة</span>
+                            <span class="suggestion-tag">عروض خاصة</span>
+                            <span class="suggestion-tag">الأكثر مبيعاً</span>
+                            <span class="suggestion-tag">منتجات مميزة</span>
+                            <span class="suggestion-tag">تخفيضات</span>
+                        </div>
+                    </div>
+
+                    <div class="search-results d-none" id="searchResults">
+                        <div class="result-item">
+                            <div class="result-img">
+                                <img src="./assets/img/logo.png" alt="Product">
+                            </div>
+                            <div class="result-info">
+                                <h6>اسم المنتج هنا</h6>
+                                <p class="result-price">250 جنيه</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end btn scroll -->
+    <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- scrollreveal Animation JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- main js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -35,65 +35,61 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 main-nav">
+                    <ul class="navbar-nav gap-5 mx-auto mb-2 mb-lg-0 main-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">الرئيسية</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">المعمول</a>
+                            <a class="nav-link" href="./about.html">من نحن</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">عرض الواقع</a>
-                        </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="./products.html">منتجاتنا</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link pages-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                صفحاتنا
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu custom-dropdown" aria-labelledby="pagesDropdown">
-                                <li><a class="dropdown-item" href="#">من نحن</a></li>
-                                <li><a class="dropdown-item" href="#">تواصل معنا</a></li>
-                            </ul>
-                        </li>
+
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">جمعيتنا البيضاء</a>
+                            <a class="nav-link" href="./contact.html">تواصل معنا</a>
                         </li>
                     </ul>
 
                     <div class="icons d-flex align-items-center gap-3">
-                        <!-- Cart -->
-                        <!-- <div class="position-relative cart_main">
-                            <img src="./assets/img/cart-1-svgrepo-com.svg" alt="Cart">
-                            <span
-                                class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-circle">
-                                0
-                            </span>
-                        </div> -->
-
-                        <!-- Favorite -->
-                        <!-- <img src="./assets/img/heart-alt-svgrepo-com.svg" alt="Favorite"> -->
-
                         <img src="./assets/img/search-svgrepo-com.svg" alt="Search" data-bs-toggle="modal"
                             data-bs-target="#searchModal" style="cursor: pointer;">
 
                         <img src="./assets/img/user-svgrepo-com.svg" alt="Profile" data-bs-toggle="modal"
                             data-bs-target="#loginModal" style="cursor: pointer;">
 
-                        <div class="demo-container">
-                            <div class="lang-btn-4" onclick="toggleSwitch(this)">
-                                <a href="./index.html" class="lang-option active">AR</a>
-                                <a href="./index_tow.html" class="lang-option ">EN</a>
-                            </div>
+
+                        <div class="language-selector">
+                            <button class="lang-btn">
+                                <img class="current-flag" src="https://flagcdn.com/16x12/sa.png" alt="EN">
+                                <span class="current-lang">EN</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </button>
+
+                            <ul class="lang-list">
+                                <li data-lang="ar" data-flag="https://flagcdn.com/16x12/sa.png">
+                                    <img src="https://flagcdn.com/16x12/sa.png" alt="SA">EN
+                                </li>
+                                <li data-lang="en" data-flag="https://flagcdn.com/16x12/gb.png">
+                                    <img src="https://flagcdn.com/16x12/gb.png" alt="GB"> EN
+                                </li>
+                                <li data-lang="fr" data-flag="https://flagcdn.com/16x12/fr.png">
+                                    <img src="https://flagcdn.com/16x12/fr.png" alt="FR"> EN
+                                </li>
+                                <li data-lang="de" data-flag="https://flagcdn.com/16x12/de.png">
+                                    <img src="https://flagcdn.com/16x12/de.png" alt="DE"> EN
+                                </li>
+                            </ul>
+
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -593,7 +589,6 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
     <!-- end btn scroll -->
     <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
     <!-- jQuery-->
@@ -606,6 +601,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!-- scrollreveal Animation JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- main js -->
     <script src="./assets/js/main.js"></script>
 </body>

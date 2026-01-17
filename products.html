@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -34,388 +34,374 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 main-nav">
+                    <ul class="navbar-nav gap-5 mx-auto mb-2 mb-lg-0 main-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">الرئيسية</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">المعمول</a>
+                            <a class="nav-link" href="./about.html">من نحن</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">عرض الواقع</a>
-                        </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="./products.html">منتجاتنا</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link pages-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                صفحاتنا
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu custom-dropdown" aria-labelledby="pagesDropdown">
-                                <li><a class="dropdown-item" href="#">من نحن</a></li>
-                                <li><a class="dropdown-item" href="#">تواصل معنا</a></li>
-                            </ul>
-                        </li>
+
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">جمعيتنا البيضاء</a>
+                            <a class="nav-link" href="./contact.html">تواصل معنا</a>
                         </li>
                     </ul>
 
                     <div class="icons d-flex align-items-center gap-3">
-                        <!-- Cart -->
-                        <!-- <div class="position-relative cart_main">
-                            <img src="./assets/img/cart-1-svgrepo-com.svg" alt="Cart">
-                            <span
-                                class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-circle">
-                                0
-                            </span>
-                        </div> -->
-
-                        <!-- Favorite -->
-                        <!-- <img src="./assets/img/heart-alt-svgrepo-com.svg" alt="Favorite"> -->
-
                         <img src="./assets/img/search-svgrepo-com.svg" alt="Search" data-bs-toggle="modal"
                             data-bs-target="#searchModal" style="cursor: pointer;">
 
                         <img src="./assets/img/user-svgrepo-com.svg" alt="Profile" data-bs-toggle="modal"
                             data-bs-target="#loginModal" style="cursor: pointer;">
 
-                        <div class="demo-container">
-                            <div class="lang-btn-4" onclick="toggleSwitch(this)">
-                                <a href="./index.html" class="lang-option active">AR</a>
-                                <a href="./index_tow.html" class="lang-option ">EN</a>
-                            </div>
+
+                        <div class="language-selector">
+                            <button class="lang-btn">
+                                <img class="current-flag" src="https://flagcdn.com/16x12/sa.png" alt="EN">
+                                <span class="current-lang">EN</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </button>
+
+                            <ul class="lang-list">
+                                <li data-lang="ar" data-flag="https://flagcdn.com/16x12/sa.png">
+                                    <img src="https://flagcdn.com/16x12/sa.png" alt="SA">EN
+                                </li>
+                                <li data-lang="en" data-flag="https://flagcdn.com/16x12/gb.png">
+                                    <img src="https://flagcdn.com/16x12/gb.png" alt="GB"> EN
+                                </li>
+                                <li data-lang="fr" data-flag="https://flagcdn.com/16x12/fr.png">
+                                    <img src="https://flagcdn.com/16x12/fr.png" alt="FR"> EN
+                                </li>
+                                <li data-lang="de" data-flag="https://flagcdn.com/16x12/de.png">
+                                    <img src="https://flagcdn.com/16x12/de.png" alt="DE"> EN
+                                </li>
+                            </ul>
+
                         </div>
+
+
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <!-- end header -->
+
     <!-- start main -->
     <main>
+        <section class="banner_main contact-banner">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2 class="mb-3">منتجاتنا</h2>
+                    <p class="mb-0">
+                        اكتشف مجموعة منتجاتنا المصممة لتلبية احتياجاتك بجودة عالية وحلول مبتكرة.
+                        نحرص على تقديم منتجات موثوقة تجمع بين الأداء والكفاءة، مع دعم مستمر لضمان
+                        أفضل تجربة لعملائنا.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section class="sections-area mt-5">
             <div class="container mt-5">
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
+                <div class="row">
+                    <!-- Filter Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="filter-sidebar">
+                            <div class="filter-section">
+                                <div class="filter-header" onclick="toggleSection(this)">
+                                    <h6>نوع التمر</h6>
+                                    <i class="fas fa-chevron-up"></i>
                                 </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                                        </div>
+                                <div class="filter-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="medjool">
+                                        <label class="form-check-label" for="medjool">تمر المجدول</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ajwa">
+                                        <label class="form-check-label" for="ajwa">تمر العجوة</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="sukkari">
+                                        <label class="form-check-label" for="sukkari">تمر السكري</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="barhi">
+                                        <label class="form-check-label" for="barhi">تمر البرحي</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="khudri">
+                                        <label class="form-check-label" for="khudri">تمر الخضري</label>
                                     </div>
                                 </div>
                             </div>
-                        </a>
+
+                            <div class="filter-section">
+                                <div class="filter-header" onclick="toggleSection(this)">
+                                    <h6>درجة الجودة</h6>
+                                    <i class="fas fa-chevron-up"></i>
+                                </div>
+                                <div class="filter-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="premium">
+                                        <label class="form-check-label" for="premium">ممتاز (Premium)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="first">
+                                        <label class="form-check-label" for="first">درجة أولى</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="second">
+                                        <label class="form-check-label" for="second">درجة ثانية</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-section">
+                                <div class="filter-header" onclick="toggleSection(this)">
+                                    <h6>نطاق السعر (ريال)</h6>
+                                    <i class="fas fa-chevron-up"></i>
+                                </div>
+                                <div class="filter-content">
+                                    <div class="price-inputs">
+                                        <div class="price-input-group">
+                                            <label>من</label>
+                                            <input type="number" placeholder="0" id="priceMin" value="0">
+                                        </div>
+                                        <div class="price-input-group">
+                                            <label>إلى</label>
+                                            <input type="number" placeholder="500" id="priceMax" value="500">
+                                        </div>
+                                    </div>
+                                    <div class="price-range-container">
+                                        <div class="range-wrapper">
+                                            <div class="range-progress" id="rangeProgress"></div>
+                                            <input type="range" class="range-slider" min="0" max="1000" value="0"
+                                                id="rangeMin" step="10">
+                                            <input type="range" class="range-slider" min="0" max="1000" value="1000"
+                                                id="rangeMax" step="10">
+                                        </div>
+                                        <div class="price-labels">
+                                            <span>0 ر.س</span>
+                                            <span>1000 ر.س</span>
+                                        </div>
+                                    </div>
+                                    <div class="current-price" id="currentPrice">0 - 500 ر.س</div>
+                                </div>
+                            </div>
+
+                            <div class="filter-section">
+                                <div class="filter-header" onclick="toggleSection(this)">
+                                    <h6>حجم العبوة</h6>
+                                    <i class="fas fa-chevron-up"></i>
+                                </div>
+                                <div class="filter-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="size500">
+                                        <label class="form-check-label" for="size500">500 جرام</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="size1kg">
+                                        <label class="form-check-label" for="size1kg">1 كيلو</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="size5kg">
+                                        <label class="form-check-label" for="size5kg">5 كيلو</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="filter-section">
+                                <button class="apply-btn" onclick="applyFilters()">
+                                    <i class="fas fa-check"></i> تطبيق الفلاتر
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
+                    <!-- Products Grid -->
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
+                                        </div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
+                                        </div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
+                                        </div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                   <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
+                                        </div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                   <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="./details_products.html">
+                                    <div class="category-card">
+                                        <div class="category-image">
+                                            <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
+                                            <div class="category-overlay"></div>
 
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
                                         </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                        <div class="category-icon">
+                                            <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
+                                        </div>
+                                        <div class="category-content">
+                                            <h3>تمر خضري</h3>
+                                            <div class="progress-container">
+                                                <div class="progress-label">
+                                                    <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة
+                                                        للتذوق</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                     <div class="col-lg-3 col-md-6">
-                        <a href="./details_products.html">
-                            <div class="category-card">
-                                <div class="category-image">
-                                    <img src="./assets/img/تمر خضري (1).png" alt="تمور فاخرة">
-                                    <div class="category-overlay"></div>
-
-                                </div>
-                                <div class="category-icon">
-                                    <img src="./assets/img/palm-tree-svgrepo-com2.svg" alt="">
-                                </div>
-                                <div class="category-content">
-                                    <h3>تمر خضري</h3>
-                                    <div class="progress-container">
-                                        <div class="progress-label">
-                                            <p>تمور مميزة من أجود الأصناف، منتقاة بعناية لتقدم لك أفضل تجربة للتذوق</p>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -557,6 +543,7 @@
         </div>
     </div>
 
+
     <!-- end btn scroll -->
     <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
     <!-- jQuery-->
@@ -571,6 +558,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- main js -->
     <script src="./assets/js/main.js"></script>
+
 </body>
 
-</html>
+</html
