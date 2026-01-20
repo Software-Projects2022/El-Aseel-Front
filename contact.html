@@ -23,7 +23,7 @@
 
 <body>
     <!-- start header -->
-       <header class="header">
+    <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -102,8 +102,6 @@
             <div class="container">
                 <div class="banner_content text-center">
                     <h2 class="mb-3">تواصل معنا</h2>
-                    <p class="mb-0">نحن هنا لمساعدتك! إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا.
-                        فريق الدعم الخاص بنا جاهز لتقديم المساعدة التي تحتاجها.</p>
                 </div>
             </div>
         </section>
@@ -128,35 +126,36 @@
                                                     <input type="text" class="form-control" placeholder="السبيعي">
                                                 </div>
                                             </div>
-    
+
                                             <div class="row">
                                                 <div class="col-md-6 mb-3">
                                                     <label class="form-label">البريد الإلكتروني</label>
-                                                    <input type="email" class="form-control" placeholder="name@email.com">
+                                                    <input type="email" class="form-control"
+                                                        placeholder="name@email.com">
                                                 </div>
-    
+
                                                 <div class="col-md-6 mb-3">
                                                     <label class="form-label">عنوان الرسالة</label>
                                                     <input type="text" class="form-control"
                                                         placeholder="استفسار / طلب خدمة">
                                                 </div>
                                             </div>
-    
-    
+
+
                                             <div class="mb-4">
                                                 <label class="form-label">نص الرسالة</label>
                                                 <textarea class="form-control" rows="1"
                                                     placeholder="اكتب تفاصيل رسالتك هنا..."></textarea>
                                             </div>
-    
+
                                             <button type="submit" class="btn btn-submit text-white">
                                                 إرسال
                                             </button>
                                         </form>
-    
+
                                     </div>
                                 </div>
-    
+
                                 <div class="col-md-5">
                                     <div class="contact-info h-100">
                                         <h3 class="mb-4">تواصل معنا</h3>
@@ -164,7 +163,7 @@
                                             يسعدنا تواصلكم معنا. فريقنا جاهز للرد على استفساراتكم
                                             وتقديم الدعم اللازم في أسرع وقت ممكن.
                                         </p>
-    
+
                                         <div class="contact-item">
                                             <div class="contact-icon">
                                                 <i class="fas fa-map-marker-alt"></i>
@@ -177,7 +176,7 @@
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                         <div class="contact-item">
                                             <div class="contact-icon">
                                                 <i class="fas fa-phone"></i>
@@ -187,7 +186,7 @@
                                                 <p class="mb-0">+966 55 123 4567</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="contact-item">
                                             <div class="contact-icon">
                                                 <i class="fas fa-envelope"></i>
@@ -197,7 +196,7 @@
                                                 <p class="mb-0">contact@company.com</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="social-links">
                                             <h6 class="mb-3">تابعنا على</h6>
                                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -213,6 +212,63 @@
                 </div>
             </div>
         </section>
+
+
+        <div class="container main_form">
+            <div class="form-section">
+                <h2>نموذج التسجيل</h2>
+                <p>أهلاً بك! قم بملء البيانات التالية للتسجيل</p>
+
+                <div class="success-message" id="successMsg">
+                    تم التسجيل بنجاح! ✓
+                </div>
+
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullname">الاسم الكامل *</label>
+                        <input type="text" id="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">المدينة *</label>
+                        <select id="city" required>
+                            <option value="">اختر المدينة</option>
+                            <option value="riyadh">الرياض</option>
+                            <option value="jeddah">جدة</option>
+                            <option value="mecca">مكة المكرمة</option>
+                            <option value="medina">المدينة المنورة</option>
+                            <option value="dammam">الدمام</option>
+                            <option value="khobar">الخبر</option>
+                            <option value="taif">الطائف</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">العنوان</label>
+                        <textarea id="address" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">تسجيل</button>
+                </form>
+            </div>
+
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27632.24!2d31.3!3d30.06!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAzJzM2LjAiTiAzMcKwMTgnMDAuMCJF!5e0!3m2!1sen!2seg!4v1234567890"
+                    width="100%" height="700" style="border:0; border-radius: 8px; margin-top: 15px;" allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+        </div>
     </main>
 
 

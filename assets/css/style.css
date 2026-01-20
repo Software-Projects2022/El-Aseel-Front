@@ -943,7 +943,7 @@ body {
 .slider-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     max-height: 100vh;
     overflow: hidden;
     background-image: url(../img/aa.webp);
@@ -981,7 +981,7 @@ body {
 .slide-image img {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 100px;
     object-fit: cover;
 }
 
@@ -994,14 +994,14 @@ body {
 }
 
 .slide-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 30px;
 }
 
 .slide-description {
-    font-size: 18px;
+    font-size: 15px;
     color: #718096;
     line-height: 1.8;
     margin-bottom: 30px;
@@ -1011,8 +1011,8 @@ body {
     display: inline-block;
     background: var(--tow-main-color);
     color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
+    padding: 10px 40px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -1021,6 +1021,10 @@ body {
     cursor: pointer;
     width: max-content;
     box-shadow: var(--box-shadow);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .slide-button:hover {
@@ -2028,9 +2032,10 @@ footer::after {
 
 .details_products .slider-for .slick-slide img {
     width: 100%;
-    height: 500px;
+    height: 530px;
     object-fit: cover;
     border-radius: 15px;
+    padding: 50px;
 }
 
 @media(max-width:991px) {
@@ -2049,8 +2054,8 @@ footer::after {
 }
 
 .details_products .slider-nav .slick-slide img {
-    width: 50%;
-    height: 100px;
+    width: 85%;
+    height: 140px;
     object-fit: cover;
     border-radius: 10px;
     border: 3px solid transparent;
@@ -2244,26 +2249,18 @@ footer::after {
 }
 
 .details_products .btn-add-cart {
-    background: #25D366;
+    background: var(--main-color);
     color: white;
 }
 
-.details_products .btn-add-cart:hover {
-    background: #128C7E;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-}
+
 
 .details_products .btn-buy-now {
-    background: #0d6efd;
+    background: var(--three-main-color);
     color: white;
 }
 
-.details_products .btn-buy-now:hover {
-    background: #0b5ed7;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
-}
+
 
 .details_products .btn-wishlist {
     background: white;
@@ -2470,6 +2467,7 @@ footer::after {
     overflow: hidden;
     position: sticky;
     top: 100px;
+    margin-bottom: 20px;
 }
 
 .filter-section {
@@ -2787,15 +2785,11 @@ footer::after {
     color: #c3c3c3;
 }
 
-@media(min-width:1660px) {
-    .contact-banner {
-        height: 40vh !important;
-    }
-}
+
 
 .contact-banner {
     width: 100%;
-    height: 70vh;
+    height: 40vh;
     background-image: url(../img/banner.png);
     background-size: cover;
     background-position: center;
@@ -2839,7 +2833,8 @@ footer::after {
 .banner_content h2 {
     font-size: 3rem;
     margin-bottom: 15px;
-    color: #fff;
+    color: var(--tow-main-color);
+    padding-top: 50px;
 }
 
 .banner_content p {
@@ -3105,3 +3100,57 @@ footer::after {
         width: 90%;
     }
 }
+
+
+.pagination-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    direction: ltr;
+}
+
+.page-item {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.page-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.page-item.active {
+    background: var(--three-main-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(59, 89, 152, 0.3);
+}
+
+.page-item.prev,
+.page-item.next {
+    background: var(--three-main-color);
+    color: white;
+    padding: 0 20px;
+    font-size: 15px;
+}
+
+

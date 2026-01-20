@@ -599,3 +599,83 @@ function applyFilters() {
     closeFilters();
   }
 }
+
+//paginationEl
+
+const totalPages = 47;
+let currentPage = 1;
+
+function renderPagination() {
+  const paginationEl = document.getElementById("pagination");
+  paginationEl.innerHTML = "";
+
+  const prevBtn = createPageItem("prev");
+  prevBtn.onclick = () => {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1);
+    }
+  };
+  paginationEl.appendChild(prevBtn);
+
+  paginationEl.appendChild(
+    createPageItem(1, currentPage === 1 ? "active" : ""),
+  );
+
+  if (currentPage > 3) {
+    paginationEl.appendChild(createPageItem("...", "dots"));
+  }
+
+  let startPage = Math.max(2, currentPage - 1);
+  let endPage = Math.min(totalPages - 1, currentPage + 1);
+
+  if (currentPage <= 3) {
+    endPage = Math.min(5, totalPages - 1);
+  }
+
+  if (currentPage >= totalPages - 2) {
+    startPage = Math.max(2, totalPages - 4);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    const pageItem = createPageItem(i, currentPage === i ? "active" : "");
+    paginationEl.appendChild(pageItem);
+  }
+
+  if (currentPage < totalPages - 2) {
+    paginationEl.appendChild(createPageItem("...", "dots"));
+  }
+
+  if (totalPages > 1) {
+    paginationEl.appendChild(
+      createPageItem(totalPages, currentPage === totalPages ? "active" : ""),
+    );
+  }
+
+  const nextBtn = createPageItem("next");
+  nextBtn.onclick = () => {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1);
+    }
+  };
+  paginationEl.appendChild(nextBtn);
+}
+
+function createPageItem(content, className) {
+  const item = document.createElement("div");
+  item.className = `page-item ${className}`;
+  item.textContent = content;
+
+  if (className !== "dots" && className !== "prev" && className !== "next") {
+    item.onclick = () => goToPage(content);
+  }
+
+  return item;
+}
+
+function goToPage(page) {
+  currentPage = page;
+  document.getElementById("currentPageDisplay").textContent = page;
+  renderPagination();
+}
+
+renderPagination();
