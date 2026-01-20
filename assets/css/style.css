@@ -2409,7 +2409,7 @@ footer::after {
     list-style: none;
     padding: 6px 0;
     margin: 0;
-    color: #fff;
+    color:var(--three-main-color);
     min-width: auto;
     display: none;
     z-index: 1000;
