@@ -81,14 +81,6 @@
                     <!-- ===== Header Icons (Search, User, Language) ===== -->
                     <div class="icons d-flex align-items-center gap-3">
 
-                        <!-- Search Icon -->
-                        <img src="./assets/img/search-svgrepo-com.svg" alt="Search" data-bs-toggle="modal"
-                            data-bs-target="#searchModal" style="cursor: pointer;">
-
-                        <!-- User / Login Icon -->
-                        <img src="./assets/img/user-svgrepo-com.svg" alt="Profile" data-bs-toggle="modal"
-                            data-bs-target="#loginModal" style="cursor: pointer;">
-
                         <!-- ===== Language Selector ===== -->
                         <div class="language-selector">
 
@@ -146,6 +138,16 @@
 
         <!-- ==========================  about main ==========================  -->
         <div class="container about_main">
+            <div class="about-text">
+  <p>
+    الأصـيـل هي شركة تسويق وتوزيع التمور الفاخرة لمنتجات مزارع أوقاف محمد بن عبدالعزيز الراجحي وتعمل تحت إدارة الأوقاف التي تمتلك واحدة من أكبر المزارع الفردية في العالم، حيث إننا وصلنا لأكثر من 250000 شجرة نخيل مثمرة.
+  </p>
+
+  <p>
+    ولدينا أكبر مركز أبحاث وتطوير لأشجار النخيل، تهدف هذه الجهود إلى تعزيز زراعة النخيل لإنتاج أجود أنواع التمور بأعلى المعايير المحلية والدولية والتي تهدف إلى توريد التمور بجميع أنواعها وأصنافها ومنتجاتها لجميع أنحاء العالم.
+  </p>
+</div>
+
             <!-- ==========================  Vision Section ==========================  -->
             <div class="section">
                 <div class="row align-items-center">
@@ -318,88 +320,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     <!-- ==========================  end btn scroll ==========================  -->
-
-
-    <!-- ========================== model user ========================== -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content login-modal">
-                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="modal-body text-center p-4">
-                    <div class="user-icon-circle mx-auto mb-4">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-
-                    <h3 class="login-title mb-4">تسجيل الدخول</h3>
-
-                    <form>
-                        <div class="mb-3 text-end">
-                            <label for="emailInput" class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-control login-input" id="emailInput"
-                                placeholder="your@email.com">
-                        </div>
-
-                        <button type="submit" class="btn btn-login w-100">دخول</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ========================== end model user ========================== -->
-
-
-    <!-- ========================== model search ========================== -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content search-modal">
-                <button type="button" class="btn-close-search" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="modal-body p-0">
-                    <div class="search-area">
-                        <div class="search-icon-wrapper">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        <input type="text" class="search-input" placeholder="ابحث عن منتجات، فئات أو كلمات مفتاحية..."
-                            id="searchInput">
-                        <button class="search-btn" type="button">
-                            <span>بحث</span>
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                    </div>
-
-                    <div class="search-suggestions">
-                        <h6 class="suggestions-title">عمليات البحث الشائعة</h6>
-                        <div class="suggestions-list">
-                            <span class="suggestion-tag">منتجات جديدة</span>
-                            <span class="suggestion-tag">عروض خاصة</span>
-                            <span class="suggestion-tag">الأكثر مبيعاً</span>
-                            <span class="suggestion-tag">منتجات مميزة</span>
-                            <span class="suggestion-tag">تخفيضات</span>
-                        </div>
-                    </div>
-
-                    <div class="search-results d-none" id="searchResults">
-                        <div class="result-item">
-                            <div class="result-img">
-                                <img src="./assets/img/logo.png" alt="Product">
-                            </div>
-                            <div class="result-info">
-                                <h6>اسم المنتج هنا</h6>
-                                <p class="result-price">250 جنيه</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ========================== ens model search ========================== -->
-
 
     <!-- ========================== lenis ========================== -->
     <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>

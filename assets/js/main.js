@@ -1,4 +1,4 @@
-// start  Initialize Lenis
+// start Initialize Lenis
 if (typeof Lenis !== "undefined") {
   const lenis = new Lenis();
   function raf(time) {
@@ -15,9 +15,16 @@ if (scrollTopBtn) {
   window.addEventListener("scroll", () => {
     scrollTopBtn.classList.toggle("show", window.pageYOffset > 300);
   });
+
+  scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 }
 
-// aso Animation
+// AOS Animation
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
 
@@ -76,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// model user
+// navbar collapse
 document.addEventListener("DOMContentLoaded", function () {
   const navbarCollapse = document.getElementById("navbarSupportedContent");
 
@@ -104,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// model search
+// search modal
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
@@ -180,16 +187,6 @@ $(document).ready(function () {
   }
 });
 
-// btn scroll
-if (scrollTopBtn) {
-  scrollTopBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-}
-
 /* ======================
    Leaflet Map (SAFE)
 ====================== */
@@ -261,6 +258,7 @@ if (form) {
   });
 }
 
+// language selector
 const langBtn = document.querySelector(".lang-btn");
 const langList = document.querySelector(".lang-list");
 const currentLang = document.querySelector(".current-lang");
@@ -268,36 +266,43 @@ const currentFlag = document.querySelector(".current-flag");
 const arrow = langBtn.querySelector(".arrow");
 
 langBtn.addEventListener("click", () => {
-  const isOpen = langList.style.display === "block";
-  langList.style.display = isOpen ? "none" : "block";
-  arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+  langList.classList.toggle("show");
+  arrow.style.transform = langList.classList.contains("show")
+    ? "rotate(180deg)"
+    : "rotate(0deg)";
 });
 
 langList.querySelectorAll("li").forEach((item) => {
   item.addEventListener("click", () => {
     currentLang.textContent = item.textContent.trim();
     currentFlag.src = item.dataset.flag;
-    langList.style.display = "none";
+    langList.classList.remove("show");
     arrow.style.transform = "rotate(0deg)";
     console.log("Language selected:", item.dataset.lang);
+    hideCurrentLang();
   });
 });
 
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".language-selector")) {
-    langList.style.display = "none";
+    langList.classList.remove("show");
     arrow.style.transform = "rotate(0deg)";
   }
 });
 
-// filter products
-
-function toggleSection(header) {
-  const content = header.nextElementSibling;
-  header.classList.toggle("collapsed");
-  content.classList.toggle("collapsed");
+function hideCurrentLang() {
+  const langItems = document.querySelectorAll(".lang-list li");
+  langItems.forEach((li) => {
+    if (li.getAttribute("data-lang") === currentLang.textContent.trim()) {
+      li.style.display = "none";
+    } else {
+      li.style.display = "flex";
+    }
+  });
 }
+hideCurrentLang();
 
+// filters
 const rangeMin = document.getElementById("rangeMin");
 const rangeMax = document.getElementById("rangeMax");
 const priceMin = document.getElementById("priceMin");
@@ -310,13 +315,8 @@ function updatePriceRange() {
   let maxVal = parseInt(rangeMax.value);
 
   if (minVal > maxVal - 10) {
-    if (this === rangeMin) {
-      rangeMin.value = maxVal - 10;
-      minVal = maxVal - 10;
-    } else {
-      rangeMax.value = minVal + 10;
-      maxVal = minVal + 10;
-    }
+    rangeMin.value = maxVal - 10;
+    minVal = maxVal - 10;
   }
 
   priceMin.value = minVal;
@@ -331,8 +331,8 @@ function updatePriceRange() {
   currentPrice.textContent = `${minVal} - ${maxVal} ر.س`;
 }
 
-rangeMin.addEventListener("input", updatePriceRange);
 rangeMax.addEventListener("input", updatePriceRange);
+rangeMin.addEventListener("input", updatePriceRange);
 
 priceMin.addEventListener("input", function () {
   let val = parseInt(this.value) || 0;
@@ -352,46 +352,9 @@ priceMax.addEventListener("input", function () {
 
 updatePriceRange();
 
-function applyFilters() {
-  const filters = {
-    dateTypes: [],
-    quality: [],
-    priceRange: {
-      min: priceMin.value,
-      max: priceMax.value,
-    },
-    packageSize: [],
-    countries: [],
-  };
-
-  document
-    .querySelectorAll(".filter-section:nth-child(1) .form-check-input:checked")
-    .forEach((input) => {
-      filters.dateTypes.push(input.nextElementSibling.textContent);
-    });
-
-  document
-    .querySelectorAll(".filter-section:nth-child(2) .form-check-input:checked")
-    .forEach((input) => {
-      filters.quality.push(input.nextElementSibling.textContent);
-    });
-
-  document
-    .querySelectorAll(".filter-section:nth-child(4) .form-check-input:checked")
-    .forEach((input) => {
-      filters.packageSize.push(input.nextElementSibling.textContent);
-    });
-
-  document
-    .querySelectorAll(".country-list .form-check-input:checked")
-    .forEach((input) => {
-      filters.countries.push(input.nextElementSibling.textContent);
-    });
-}
-
+// filter sidebar mobile
 document.addEventListener("DOMContentLoaded", function () {
   setupMobileFilters();
-  initPriceRange();
   initFilterToggles();
 });
 
@@ -417,11 +380,11 @@ function setupMobileFilters() {
     const header = document.createElement("div");
     header.className = "filter-sidebar-header";
     header.innerHTML = `
-                    <h5>تصفية المنتجات</h5>
-                    <button class="filter-close-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-                `;
+      <h5>تصفية المنتجات</h5>
+      <button class="filter-close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    `;
     filterSidebar.insertBefore(header, filterSidebar.firstChild);
   }
 
@@ -478,94 +441,6 @@ function initFilterToggles() {
   });
 }
 
-function initPriceRange() {
-  const rangeMin = document.getElementById("rangeMin");
-  const rangeMax = document.getElementById("rangeMax");
-  const priceMin = document.getElementById("priceMin");
-  const priceMax = document.getElementById("priceMax");
-  const currentPrice = document.getElementById("currentPrice");
-  const rangeProgress = document.getElementById("rangeProgress");
-
-  if (!rangeMin || !rangeMax) return;
-
-  rangeMin.addEventListener("input", function () {
-    let minValue = parseInt(this.value);
-    let maxValue = parseInt(rangeMax.value);
-
-    if (minValue >= maxValue - 10) {
-      this.value = maxValue - 10;
-      minValue = maxValue - 10;
-    }
-
-    priceMin.value = minValue;
-    updatePriceDisplay();
-    updateRangeProgress();
-  });
-
-  rangeMax.addEventListener("input", function () {
-    let maxValue = parseInt(this.value);
-    let minValue = parseInt(rangeMin.value);
-
-    if (maxValue <= minValue + 10) {
-      this.value = minValue + 10;
-      maxValue = minValue + 10;
-    }
-
-    priceMax.value = maxValue;
-    updatePriceDisplay();
-    updateRangeProgress();
-  });
-
-  priceMin.addEventListener("input", function () {
-    let minValue = parseInt(this.value) || 0;
-    let maxValue = parseInt(priceMax.value);
-
-    if (minValue >= maxValue - 10) {
-      minValue = maxValue - 10;
-      this.value = minValue;
-    }
-
-    rangeMin.value = minValue;
-    updatePriceDisplay();
-    updateRangeProgress();
-  });
-
-  priceMax.addEventListener("input", function () {
-    let maxValue = parseInt(this.value) || 0;
-    let minValue = parseInt(priceMin.value);
-
-    if (maxValue <= minValue + 10) {
-      maxValue = minValue + 10;
-      this.value = maxValue;
-    }
-
-    rangeMax.value = maxValue;
-    updatePriceDisplay();
-    updateRangeProgress();
-  });
-
-  function updatePriceDisplay() {
-    const min = priceMin.value || 0;
-    const max = priceMax.value || 0;
-    currentPrice.textContent = `${min} - ${max} ر.س`;
-  }
-
-  function updateRangeProgress() {
-    const min = parseInt(rangeMin.value);
-    const max = parseInt(rangeMax.value);
-    const total = parseInt(rangeMin.max);
-
-    const leftPercent = (min / total) * 100;
-    const rightPercent = 100 - (max / total) * 100;
-
-    rangeProgress.style.right = rightPercent + "%";
-    rangeProgress.style.left = leftPercent + "%";
-  }
-
-  updatePriceDisplay();
-  updateRangeProgress();
-}
-
 function applyFilters() {
   const filters = {
     types: [],
@@ -600,8 +475,7 @@ function applyFilters() {
   }
 }
 
-//paginationEl
-
+// pagination
 const totalPages = 47;
 let currentPage = 1;
 
@@ -611,9 +485,7 @@ function renderPagination() {
 
   const prevBtn = createPageItem("prev");
   prevBtn.onclick = () => {
-    if (currentPage > 1) {
-      goToPage(currentPage - 1);
-    }
+    if (currentPage > 1) goToPage(currentPage - 1);
   };
   paginationEl.appendChild(prevBtn);
 
@@ -637,8 +509,9 @@ function renderPagination() {
   }
 
   for (let i = startPage; i <= endPage; i++) {
-    const pageItem = createPageItem(i, currentPage === i ? "active" : "");
-    paginationEl.appendChild(pageItem);
+    paginationEl.appendChild(
+      createPageItem(i, currentPage === i ? "active" : ""),
+    );
   }
 
   if (currentPage < totalPages - 2) {
@@ -653,9 +526,7 @@ function renderPagination() {
 
   const nextBtn = createPageItem("next");
   nextBtn.onclick = () => {
-    if (currentPage < totalPages) {
-      goToPage(currentPage + 1);
-    }
+    if (currentPage < totalPages) goToPage(currentPage + 1);
   };
   paginationEl.appendChild(nextBtn);
 }
