@@ -3182,3 +3182,6 @@ footer::after {
     cursor: pointer;
     padding: 8px;
 }
+.section{
+    margin-bottom: 50px !important;
+}
