@@ -4285,3 +4285,23 @@ footer::after {
 .tab-pane ul li::before {
     content: none;
 }
+
+.tab-pane p {
+    color: #555;
+    line-height: 1.9;
+    font-size: 17px;
+    margin-bottom: 15px;
+    text-align: right;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tab-pane p:last-of-type {
+    border-bottom: none;
+}
+
+.tab-pane p strong {
+    color: #d4a574;
+    font-weight: 600;
+    margin-left: 10px;
+}

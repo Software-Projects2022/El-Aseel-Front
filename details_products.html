@@ -150,28 +150,23 @@
                         <p>التمور غنية بالعناصر الغذائية الهامة مثل الألياف، البوتاسيوم، المغنيسيوم، والفيتامينات. تُعد
                             وجبة خفيفة مثالية وصحية في أي وقت من اليوم.</p>
                     </div>
-
                     <div id="specifications" class="tab-pane">
                         <h3>معلومات المنتج</h3>
-                        <ul>
-                            <li><strong>النوع:</strong> تمور المجدول الفاخرة</li>
-                            <li><strong>المنشأ:</strong> المملكة العربية السعودية</li>
-                            <li><strong>الدرجة:</strong> درجة أولى ممتازة</li>
-                            <li><strong>الوزن:</strong> 1 كيلوجرام</li>
-                            <li><strong>التعبئة:</strong> عبوة محكمة الإغلاق</li>
-                            <li><strong>الصلاحية:</strong> 12 شهر من تاريخ الإنتاج</li>
-                            <li><strong>التخزين:</strong> في مكان جاف وبارد</li>
-                            <li><strong>القيمة الغذائية:</strong> 282 سعرة حرارية لكل 100 جرام</li>
-                        </ul>
+                        <p><strong>النوع:</strong> تمور المجدول الفاخرة</p>
+                        <p><strong>المنشأ:</strong> المملكة العربية السعودية</p>
+                        <p><strong>الدرجة:</strong> درجة أولى ممتازة</p>
+                        <p><strong>الوزن:</strong> 1 كيلوجرام</p>
+                        <p><strong>التعبئة:</strong> عبوة محكمة الإغلاق</p>
+                        <p><strong>الصلاحية:</strong> 12 شهر من تاريخ الإنتاج</p>
+                        <p><strong>التخزين:</strong> في مكان جاف وبارد</p>
+                        <p><strong>القيمة الغذائية:</strong> 282 سعرة حرارية لكل 100 جرام</p>
 
                         <h4>الفوائد الصحية:</h4>
-                        <ul>
-                            <li>مصدر ممتاز للطاقة الطبيعية</li>
-                            <li>غني بالألياف التي تساعد على الهضم</li>
-                            <li>يحتوي على مضادات أكسدة قوية</li>
-                            <li>يدعم صحة القلب والأوعية الدموية</li>
-                            <li>يساعد في تقوية العظام</li>
-                        </ul>
+                        <p>مصدر ممتاز للطاقة الطبيعية</p>
+                        <p>غني بالألياف التي تساعد على الهضم</p>
+                        <p>يحتوي على مضادات أكسدة قوية</p>
+                        <p>يدعم صحة القلب والأوعية الدموية</p>
+                        <p>يساعد في تقوية العظام</p>
                     </div>
                 </div>
             </div>
@@ -284,18 +279,18 @@
             });
 
             // Tabs Functionality
-            $('.nav-tabs .nav-link').on('click', function(e) {
+            $('.nav-tabs .nav-link').on('click', function (e) {
                 e.preventDefault();
-                
+
                 // Remove active from all links
                 $('.nav-tabs .nav-link').removeClass('active');
-                
+
                 // Remove active from all panes
                 $('.tab-pane').removeClass('active');
-                
+
                 // Add active to clicked link
                 $(this).addClass('active');
-                
+
                 // Show target pane
                 const tabId = $(this).data('tab');
                 $('#' + tabId).addClass('active');
